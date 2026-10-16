@@ -44,3 +44,32 @@ Install the required libraries:
 Run the project from the parent folder:
 
 `python IPL-Data-Analysis/ipl_analysis.py`
+
+
+## Data Visualizations
+
+### 1. Total Matches Won by Each Team
+![Team Wins](team_wins.png)
+
+### 2. Does Winning the Toss Help Win the Match?
+![Toss Analysis](toss_analysis.png)
+
+### 3. Top 10 IPL Venues by Matches Hosted
+![Top Venues](top_venues.png)
+
+### 4. Number of IPL Matches by Year
+![Matches by Year](matches_by_year.png)
+
+### 5. Top 10 Players by Player of the Match Awards
+![Top Players](top_players.png)
+
+
+## Data Cleaning
+
+- Inspected the dataset using Pandas `info()` and `isnull().sum()`.
+- Identified missing values in city, winner, Player of the Match, and umpire columns.
+- Checked for duplicate records.
+- Converted the date column to datetime format for year-wise analysis.
+- Created a year column to analyze the number of matches by season.
+
+**Note:** Missing values were inspected before deciding how to handle them. The original dataset contains 636 match records.

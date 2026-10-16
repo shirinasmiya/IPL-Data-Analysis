@@ -214,3 +214,21 @@ plt.tight_layout()
 
 plt.savefig("IPL-Data-Analysis/top_players.png")
 plt.show()
+
+# Does choosing to field first help?
+field_first = df[
+    df["toss_decision"].str.lower() == "field"
+]
+
+field_first_wins = (
+    field_first["toss_winner"] == field_first["winner"]
+).sum()
+
+valid_matches = field_first["winner"].notna().sum()
+
+if valid_matches > 0:
+    percentage = field_first_wins / valid_matches * 100
+    print(
+        f"Toss-winning teams that chose to field "
+        f"won {percentage:.1f}% of those matches."
+    )
